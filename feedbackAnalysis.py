@@ -77,6 +77,7 @@ def plot_sentiment():
     ax.set_title('Sentiment Analysis of Search Results')
     ax.set_xlabel('Sources')
     ax.set_ylabel('Sentiment Score')
+    ax.set_ylim(0, 100) 
 
     for widget in plot_frame.winfo_children():
         widget.destroy()

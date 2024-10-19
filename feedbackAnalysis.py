@@ -1,4 +1,4 @@
-mport tkinter as tk
+import tkinter as tk
 from tkinter import ttk
 from googlesearch import search
 from textblob import TextBlob

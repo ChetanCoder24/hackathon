@@ -48,7 +48,7 @@ def plot_sentiment():
         article.nlp()
         blob = TextBlob(article.summary)
         sentiment += blob.sentiment.polarity
-    redditPerc = (sentiment / 3 + 1) / 2
+    redditPerc = ((sentiment / 3 + 1) / 2) * 100
 
     sentiment = 0
     for article in quoraResults:
@@ -57,7 +57,7 @@ def plot_sentiment():
         article.nlp()
         blob = TextBlob(article.summary)
         sentiment += blob.sentiment.polarity
-    quoraPerc = (sentiment / 3 + 1) / 2
+    quoraPerc = ((sentiment / 3 + 1) / 2) * 100
 
     sentiment = 0
     for article in newsResults:
@@ -66,7 +66,7 @@ def plot_sentiment():
         article.nlp()
         blob = TextBlob(article.summary)
         sentiment += blob.sentiment.polarity
-    newsPerc = (sentiment / 3 + 1) / 2
+    newsPerc = ((sentiment / 3 + 1) / 2) * 100
 
     x = ['Reddit', 'Quora', 'News Channels']
     y = [redditPerc, quoraPerc, newsPerc]

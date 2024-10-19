@@ -1,8 +1,8 @@
 import praw
 
 reddit = praw.Reddit(
-    client_id='YOUR_CLIENT_ID',
-    client_secret='YOUR_CLIENT_SECRET',
+    client_id='TNsziSQCYgK1nKhJRP0Mcg',
+    client_secret='I6BkIj4M-6HB9z2ncP_u2XuvfRIwDg',
     user_agent='YOUR_USER_AGENT')
 
 def extract_post_details(post_url):

@@ -19,3 +19,5 @@ for submission in reddit.subreddit('bangalore').hot(limit = NONE):
     print(submission.title)
 headlines.add(submission.title)
 print(len(headlines))
+df = pd.DataFrame(headlines)
+df.head()

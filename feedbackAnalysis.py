@@ -1,4 +1,4 @@
-import tkinter as tk
+mport tkinter as tk
 from tkinter import ttk
 from googlesearch import search
 from textblob import TextBlob
@@ -48,7 +48,7 @@ def plot_sentiment():
         article.nlp()
         blob = TextBlob(article.summary)
         sentiment += blob.sentiment.polarity
-    redditPerc = (sentiment / 3 + 1) / 2
+    redditPerc = ((sentiment / 3 + 1) / 2) * 100
 
     sentiment = 0
     for article in quoraResults:
@@ -57,7 +57,7 @@ def plot_sentiment():
         article.nlp()
         blob = TextBlob(article.summary)
         sentiment += blob.sentiment.polarity
-    quoraPerc = (sentiment / 3 + 1) / 2
+    quoraPerc = ((sentiment / 3 + 1) / 2) * 100
 
     sentiment = 0
     for article in newsResults:
@@ -66,7 +66,7 @@ def plot_sentiment():
         article.nlp()
         blob = TextBlob(article.summary)
         sentiment += blob.sentiment.polarity
-    newsPerc = (sentiment / 3 + 1) / 2
+    newsPerc = ((sentiment / 3 + 1) / 2) * 100
 
     x = ['Reddit', 'Quora', 'News Channels']
     y = [redditPerc, quoraPerc, newsPerc]
@@ -77,6 +77,7 @@ def plot_sentiment():
     ax.set_title('Sentiment Analysis of Search Results')
     ax.set_xlabel('Sources')
     ax.set_ylabel('Sentiment Score')
+    ax.set_ylim(0, 100) 
 
     for widget in plot_frame.winfo_children():
         widget.destroy()
